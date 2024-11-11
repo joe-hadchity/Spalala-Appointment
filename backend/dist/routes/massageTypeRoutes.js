@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const massageTypeController_1 = require("../controllers/massageTypeController");
+const router = (0, express_1.Router)();
+router.post('/', massageTypeController_1.createNewMassageType);
+router.get('/:id', massageTypeController_1.getMassageType);
+router.put('/:id', massageTypeController_1.updateMassageTypeById);
+router.delete('/:id', massageTypeController_1.deleteMassageTypeById);
+router.get('/', massageTypeController_1.getAllMassageTypesController);
+router.get('/search', massageTypeController_1.searchForMassageTypes);
+exports.default = router;
